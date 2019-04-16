@@ -3,7 +3,7 @@ Contact list manager web app using  MongoDB, Express.js, AngularJS, and Node.js 
 
 ## Before you begin
 
-Before you begin we recommend you read about the basic building blocks that assemble a MEAN.JS application:
+Before you begin we recommend you read about the basic building blocks that assemble a MEAN.JS application.
 
 - MongoDB - Go through [MongoDB Official Website](https://www.mongodb.com/) and proceed to their [Official Manual](https://docs.mongodb.com/manual/), which should help you understand NoSQL and MongoDB better.
 - Express - The best way to understand express is through its [Official Website](https://expressjs.com/), which has a [Getting Started guide](http://expressjs.com/en/starter/installing.html), as well as an [ExpressJS guide](http://expressjs.com/en/guide/routing.html) for general express topics
@@ -24,7 +24,7 @@ Before you begin we recommend you read about the basic building blocks that asse
 ```
 
 ### Get the Code
-Either clone this repository or fork it on GitHub and clone your fork:
+Either clone this repository or fork it on GitHub and clone your fork.
 ```
   git clone https://github.com/tharunrajsoma/Contact-Manager-Using-MEAN-Stack.git
   cd contact-list-application
@@ -39,15 +39,15 @@ Either clone this repository or fork it on GitHub and clone your fork:
 ```
 
 ### Nodemon Installation
-- Everytime we make changes to server side code there is a need to restart the server. Instead we can install **nodemon** which will continuously watches for any source code file changes and restarts the server
+- Everytime we make changes to server side code there is a need to restart the server. Instead we can install **nodemon** which will continuously watches for any source code file changes and restarts the server.
 ```
   npm install -g nodemon
 ```
 
 ### App Server
-The application server is a NodeJS application that relies upon some 3rd Party npm packages. You need to install these:
+The application server is a NodeJS application that relies upon some 3rd Party npm packages.
 
-- Install local dependencies (from the project root folder):
+- Install local dependencies (from the project root folder).
 ```
   cd Contact-Manager-Using-MEAN-Stack
   npm install
@@ -56,7 +56,7 @@ The application server is a NodeJS application that relies upon some 3rd Party n
 
 ### Client Dependencies
 
-Even for client side dependencies goto client folder in the root folder and perform below command
+Even for client side dependencies goto client folder in the root folder and perform below command.
 ```
   cd client
   npm install
@@ -65,18 +65,18 @@ Even for client side dependencies goto client folder in the root folder and perf
 
 ## Running the App
 
-Open Node.js command prompt in project root directory
-- Start your MongoDB database -
+Open Node.js command prompt in project root directory.
+- Start your MongoDB database
 ```
   "C:\Program Files\MongoDB\Server\4.0\bin\mongod.exe" --dbpath="c:\data\db"
 ```
 
-- Start Node.js server at port:3000
+- Start Node.js server on port: 3000.
 ```
   nodemon
 ```
 
-- Start client at port:4200.
+- Start client on port: 4200.
 ```
   cd client
   npm start
