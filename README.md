@@ -3,7 +3,7 @@ Contact list manager web app using  MongoDB, Express.js, AngularJS, and Node.js 
 
 ## Before you begin
 
-Before you begin we recommend you read about the basic building blocks that assemble a MEAN.JS application.
+Before you begin I recommend you to read about the basic building blocks that assemble a MEAN.JS application.
 
 - MongoDB - Go through [MongoDB Official Website](https://www.mongodb.com/) and proceed to their [Official Manual](https://docs.mongodb.com/manual/), which should help you understand NoSQL and MongoDB better.
 - Express - The best way to understand express is through its [Official Website](https://expressjs.com/), which has a [Getting Started guide](http://expressjs.com/en/starter/installing.html), as well as an [ExpressJS guide](http://expressjs.com/en/guide/routing.html) for general express topics
@@ -17,7 +17,7 @@ Before you begin we recommend you read about the basic building blocks that asse
 - MongoDB - [Download & Install MongoDB](https://www.mongodb.com/download-center), and make sure it's running on the default port (27017). Server download is recommended.
 
 ### MongoDB setup
-- Create database directory - Create the data directory where MongoDB stores data. MongoDB’s default data directory path is the absolute path \data\db on the drive from which you start MongoDB.
+- Create a database directory - Create the data directory where MongoDB stores data. MongoDB’s default data directory path is the absolute path \data\db on the drive from which you start MongoDB.
 ```
   cd C:\
   md "\data\db"
@@ -56,7 +56,7 @@ The application server is a NodeJS application that relies upon some 3rd Party n
 
 ### Client Dependencies
 
-Even for client side dependencies goto client folder in the root folder and perform below command.
+Even for client side dependencies go to client folder in the root folder and perform below command.
 ```
   cd client
   npm install
