@@ -83,6 +83,12 @@ Open Node.js command prompt in project root directory.
 ```
 - Open [http:/localhost:4200](http:/localhost:4200) to view your app.
 
+### Contact List App UI
+
+<p align = 'center'>
+  <img src = '/images/contact_list_app.png'>
+</p>
+
 #### Congratulations you can now run your contact list manager app using MEAN stack.
 
 
