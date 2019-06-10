@@ -1,39 +1,55 @@
 <br>
 <div class = "container">
-  <h2 class = "page-header"> Add Contact </h2>
-  <form (submit) = "addContact()">
-    <div class = "form-group">
+  <h2 class = "page-header" align="center" > Add Contact </h2>
+  <form [formGroup]="angForm" (submit) = "addContact()" (keydown.enter)="$event.preventDefault()">
+    <div class = "form-group" float = "left" display = "inline-block">
       <label>First Name</label>
-      <input type = "text" [(ngModel)] = "first_name" name = "first_name" class = "form-control">
+      <input type = "text" class = "form-control" formControlName = "first_name" [ngClass]="{'is-invalid': submitted && angForm.controls['first_name'].errors}" >
     </div>
-    <div class = "form-group">
+    <div *ngIf="submitted && angForm.controls['first_name'].errors" class="invalid-feedback d-block">
+      <div *ngIf="angForm.controls['first_name'].errors.required">First Name is required</div>
+    </div>
+    <br>
+
+    <div class = "form-group" float = "left" display = "inline-block">
       <label>Last Name</label>
-      <input type = "text" [(ngModel)] = "last_name" name = "last_name" class = "form-control">
+      <input type = "text" class = "form-control" formControlName = "last_name" [ngClass]="{'is-invalid': submitted && angForm.controls['last_name'].errors}">
     </div>
+    <div *ngIf="submitted && angForm.controls['last_name'].errors" class="invalid-feedback d-block">
+      <div *ngIf="angForm.controls['last_name'].errors.required">Last Name is required</div>
+    </div>
+    <br>
+
     <div class = "form-group">
-      <label>Phone</label>
-      <input type = "text" [(ngModel)] = "phone" name = "phone" class = "form-control" required>
+      <label>Phone Number</label>
+      <input type = "text" class = "form-control" formControlName = "phone" [ngClass]="{'is-invalid': submitted && angForm.controls['phone'].errors}">
     </div>
-    <input type= "submit" class = "btn btn btn-success" value = "Add">
+    <div *ngIf="submitted && angForm.controls['phone'].errors" class="invalid-feedback d-block">
+      <div *ngIf="angForm.controls['phone'].errors.required">Phone No is required</div>
+      <div *ngIf="angForm.controls['phone'].errors.minlength">Phone No must have at least 10 numbers</div>
+    </div>
+    <br>
+
+    <input type= "submit" class = "btn btn-success" value = "Add Contact">
   </form>
 </div>
 
 <hr>
 
 <div class = 'container'>
+  <div class = 'row'>
+    <div class = "col-md-3">First Name</div>
+    <div class = "col-md-3">Last Name</div>
+    <div class = "col-md-3">Phone Number</div>
+    <div class = "col-md-3">Operation</div>
+  </div>
+  <br>
   <div *ngFor = "let contact of contacts">
     <div class = 'row'>
-      <div class = "col-md-3">
-        {{contact.first_name}}
-      </div>
-      <div class = "col-md-3">
-        {{contact.last_name}}
-      </div>
-      <div class = "col-md-3">
-        {{contact.phone}}
-      </div>
-      <div class = "col-md-3">
-        <input type= "button" (click) = "deleteContact(contact._id)" value = "Delete" class = "btn btn-danger">
+      <div class = "col-md-3">{{contact.first_name}}</div>
+      <div class = "col-md-3">{{contact.last_name}}</div>
+      <div class = "col-md-3">{{contact.phone}}</div>
+      <div class = "col-md-3"><input type= "button" (click) = "deleteContact(contact._id)" value = "Delete" class = "btn btn-danger">
         <br> <br>
       </div>
     </div>
